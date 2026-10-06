@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Little List — To-do</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app" aria-labelledby="title">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Little List home"><span class="brand-mark">✓</span> little list</a>
+      <span class="date" id="today"></span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">YOUR DAY, YOUR PACE</p>
+      <h1 id="title"><h1 id="title">My day,<br><span>my plans.</span></h1><br><span>what matters.</span></h1>
+      <p class="subtitle">One small step at a time.</p>
+    </section>
+
+    <section class="list-card" aria-label="Your tasks">
+      <form id="task-form" class="task-form">
+        <label class="sr-only" for="task-input">Add a task</label>
+        <input id="task-input" name="task" type="text" maxlength="120" placeholder="What would you like to do?" autocomplete="off" required>
+        <button type="submit" aria-label="Add task">＋</button>
+      </form>
+      <div class="list-heading"><h2>Today</h2><span id="task-count">0 tasks</span></div>
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+      <p id="empty-state" class="empty-state">Your list is clear. Add a task to get started 🌱</p>
+      <footer class="card-footer"><span>Small progress is still progress.</span><button id="clear-done" class="text-button" type="button">Clear completed</button></footer>
+    </section>
+    <p class="privacy-note">Your tasks stay in this browser, saved on this device.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
